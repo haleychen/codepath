@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var divider: UIView!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     var tipSelection: Double = 15.0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +35,14 @@ class ViewController: UIViewController {
         tipSelection = defaultTipSelection
         _calculateTip()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(1.0, animations: {
+            let MONEY_COLOR = UIColor(red:0.52, green:0.73, blue:0.40, alpha:1.0)
+            self.divider.backgroundColor = MONEY_COLOR
+        })
+    }
+    
 
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)

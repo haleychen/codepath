@@ -25,7 +25,6 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        NSUserDefaults.standard
         let defaults = NSUserDefaults.standardUserDefaults()
         let defaultTipSelection = defaults.doubleForKey("defaultTipSelection")
         defaultTipControl.selectedSegmentIndex = [0.15, 0.18, 0.25].indexOf(defaultTipSelection)!
