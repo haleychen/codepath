@@ -15,6 +15,7 @@
 		8B568EE81F47CE1700806228 /* tipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B568EE71F47CE1700806228 /* tipCalculatorTests.swift */; };
 		8B568EF31F47CE1700806228 /* tipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B568EF21F47CE1700806228 /* tipCalculatorUITests.swift */; };
 		8B568F011F47DBAF00806228 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B568F001F47DBAF00806228 /* SettingsViewController.swift */; };
+		8B568F031F48E5BB00806228 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B568F021F48E5BB00806228 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8B568EF21F47CE1700806228 /* tipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipCalculatorUITests.swift; sourceTree = "<group>"; };
 		8B568EF41F47CE1700806228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B568F001F47DBAF00806228 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8B568F021F48E5BB00806228 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		8B568ED11F47CE1700806228 /* tipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				8B568F021F48E5BB00806228 /* AboutUsViewController.swift */,
 				8B568F001F47DBAF00806228 /* SettingsViewController.swift */,
 				8B568ED21F47CE1700806228 /* AppDelegate.swift */,
 				8B568ED41F47CE1700806228 /* ViewController.swift */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B568F031F48E5BB00806228 /* AboutUsViewController.swift in Sources */,
 				8B568ED51F47CE1700806228 /* ViewController.swift in Sources */,
 				8B568ED31F47CE1700806228 /* AppDelegate.swift in Sources */,
 				8B568F011F47DBAF00806228 /* SettingsViewController.swift in Sources */,

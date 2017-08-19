@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EE45D8B5A4F034C5318CE363F39783042C532F9C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8F5938DC759B67AD6739CEA354916264C6C805CF" : 0,
+    "EE45D8B5A4F034C5318CE363F39783042C532F9C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0B2D2799-4321-4096-A4CD-82048347A5EA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8F5938DC759B67AD6739CEA354916264C6C805CF" : "",
+    "EE45D8B5A4F034C5318CE363F39783042C532F9C" : "iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TippyMcTipTip",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "tipCalculator\/TippyMcTipTip.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:bobbyjoe93\/Hollaback.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8F5938DC759B67AD6739CEA354916264C6C805CF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:haleychen\/codepath.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EE45D8B5A4F034C5318CE363F39783042C532F9C"
+    }
+  ]
+}
