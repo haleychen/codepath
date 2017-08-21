@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = [0.15, 0.18, 0.25].indexOf(defaultTipSelection)!
         tipSelection = defaultTipSelection
         _calculateTip()
+        
+        billField.becomeFirstResponder()
     }
     
     override func viewDidAppear(animated: Bool) {
