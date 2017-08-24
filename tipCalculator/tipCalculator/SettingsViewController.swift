@@ -8,14 +8,26 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var currencySelector: UIPickerView!
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
+
+    var localeDisplayNames = NSMutableArray()
+    var localeDisplayNameToIdentifier = NSMutableDictionary()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        let locale = NSLocale(localeIdentifier: "en_US")
+        for identifier in NSLocale.availableLocaleIdentifiers() {
+            let displayName = locale.displayNameForKey(NSLocaleIdentifier, value: identifier)!
+            self.localeDisplayNames.addObject(displayName)
+            self.localeDisplayNameToIdentifier[displayName] = identifier
+        }
+        currencySelector.delegate = self
+        currencySelector.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +51,21 @@ class SettingsViewController: UIViewController {
         defaults.synchronize()
     }
 
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.localeDisplayNames.count
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let selectedDisplayName = (self.localeDisplayNames[row] as! String)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(self.localeDisplayNameToIdentifier[selectedDisplayName], forKey: "localeIdentifier")
+        return selectedDisplayName
+    }
+    
     /*
     // MARK: - Navigation
 

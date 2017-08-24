@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     var tipSelection: Double = 15.0
-    
+//    var localeIdentifier: String = "es_CL"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,8 +60,20 @@ class ViewController: UIViewController {
         let bill = Double(billField.text!) ?? 0
         let tip = bill * (tipPercentages[tipControl.selectedSegmentIndex] ?? tipSelection)
         let total = bill + tip
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = .CurrencyStyle
+
+        // Need to debug why locale identifier string isn't displaying the value correctly
+        var localeIdentifier = NSUserDefaults.standardUserDefaults().objectForKey("localeIdentifier")
+        if (localeIdentifier == nil) {
+            localeIdentifier = "es_CL"
+        }
+
+        numberFormatter.locale = NSLocale.currentLocale() // NSLocale(localeIdentifier: localeIdentifierAsString as! String)
+
+        tipLabel.text = numberFormatter.stringFromNumber(tip)
+        totalLabel.text = numberFormatter.stringFromNumber(total)
     }
 }
 

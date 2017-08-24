@@ -148,11 +148,23 @@
                                     <action selector="defaultTipDidChange:" destination="UQ3-qP-SHb" eventType="valueChanged" id="3Kc-ro-0n9"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uat-Uy-jaZ">
+                                <rect key="frame" x="20" y="174" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="HZ4-mO-RYT">
+                                <rect key="frame" x="0.0" y="208" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AMm-dP-tSK"/>
                     <connections>
+                        <outlet property="currencySelector" destination="HZ4-mO-RYT" id="u0x-ha-JER"/>
                         <outlet property="defaultTipControl" destination="AQD-ae-cIM" id="NQj-Zq-Oj6"/>
                     </connections>
                 </viewController>
